@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Application Form</h1>
+    <form id="loanForm" onsubmit="validateForm(event)">
+      <!-- Loan Details -->
+      <fieldset>
+        <legend>Loan Details</legend>
+        <label for="loanAmount">Loan Amount*</label>
+        <input type="number" id="loanAmount" name="loanAmount" required>
+
+        <label for="monthlyIncome">Monthly Income*</label>
+        <input type="number" id="monthlyIncome" name="monthlyIncome" required>
+
+        <label for="purpose">Purpose of Loan</label>
+        <select id="purpose" name="purpose">
+          <option value="business">Business</option>
+          <option value="personal">Personal</option>
+          <option value="education">Education</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="loanYears">Loan Years</label>
+        <select id="loanYears" name="loanYears">
+          <option value="6">6 Months</option>
+          <option value="12">1 Year</option>
+          <option value="24">2 Years</option>
+          <option value="36">3 Years</option>
+        </select>
+      </fieldset>
+
+      <!-- Personal Details -->
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fullName">Full Name*</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Mobile Number*</label>
+        <input type="tel" id="mobile" name="mobile" required>
+
+        <label for="maritalStatus">Marital Status*</label>
+        <select id="maritalStatus" name="maritalStatus" required>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="divorced">Divorced</option>
+        </select>
+
+        <label for="birthDate">Birth Date*</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <label for="dependents">Number of Dependents*</label>
+        <input type="number" id="dependents" name="dependents" min="0" required>
+      </fieldset>
+
+      <!-- Address Details -->
+      <fieldset>
+        <legend>Address Details</legend>
+        <label for="houseNumber">House No/Name*</label>
+        <input type="text" id="houseNumber" name="houseNumber" required>
+
+        <label for="street">Street*</label>
+        <input type="text" id="street" name="street" required>
+
+        <label for="city">City*</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="state">State*</label>
+        <input type="text" id="state" name="state" required>
+
+        <label for="country">Country*</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="pinCode">Pin Code*</label>
+        <input type="text" id="pinCode" name="pinCode" required>
+      </fieldset>
+
+            <!-- File Uploads for Applicant -->
+            <fieldset>
+                <legend>Applicant's Documents</legend>
+                <label for="applicantID">Upload ID*</label>
+                <input type="file" id="applicantID" name="applicantID" required>
+        
+                <label for="applicantPhoto">Upload Passport Photo*</label>
+                <input type="file" id="applicantPhoto" name="applicantPhoto" required>
+        
+                <label for="applicantSignature">Upload Signature*</label>
+                <input type="file" id="applicantSignature" name="applicantSignature" required>
+              </fieldset>
+
+      <!-- Employment Details -->
+      <fieldset>
+        <legend>Employment Details</legend>
+        <label for="industry">Employment Industry*</label>
+        <input type="text" id="industry" name="industry" required>
+
+        <label for="employerName">Employer Name*</label>
+        <input type="text" id="employerName" name="employerName" required>
+
+        <label for="employerStatus">Employer Status*</label>
+        <select id="employerStatus" name="employerStatus" required>
+          <option value="fullTime">Full Time Employed</option>
+          <option value="partTime">Part Time Employed</option>
+          <option value="selfEmployed">Self Employed</option>
+        </select>
+
+        <label for="employmentLength">Length of Employment*</label>
+        <input type="text" id="employmentLength" name="employmentLength" required>
+
+        <label for="workPhone">Work Phone Number*</label>
+        <input type="tel" id="workPhone" name="workPhone" required>
+      </fieldset>
+            <!-- Guarantor Details -->
+            <fieldset>
+                <legend>Guarantor's Details</legend>
+                <label for="guarantorName">Full Name*</label>
+                <input type="text" id="guarantorName" name="guarantorName" required>
+        
+                <label for="guarantorEmail">Email*</label>
+                <input type="email" id="guarantorEmail" name="guarantorEmail" required>
+        
+                <label for="guarantorMobile">Mobile Number*</label>
+                <input type="tel" id="guarantorMobile" name="guarantorMobile" required>
+              </fieldset>
+              
+              <!-- File Uploads for Guarantor -->
+              <fieldset>
+                <legend>Guarantor's Documents</legend>
+                <label for="guarantorID">Upload ID*</label>
+                <input type="file" id="guarantorID" name="guarantorID" required>
+        
+                <label for="guarantorPhoto">Upload Passport Photo*</label>
+                <input type="file" id="guarantorPhoto" name="guarantorPhoto" required>
+        
+                <label for="guarantorSignature">Upload Signature*</label>
+                <input type="file" id="guarantorSignature" name="guarantorSignature" required>
+              </fieldset>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
